@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111111;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* App wrapper */
+.ia-app {
+  max-width: 360px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px 24px;
+}
+
+/* Header logo */
+.ia-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ia-logo {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Hero image */
+.ia-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ia-hero-img {
+  max-width: 260px;
+  height: auto;
+}
+
+/* Main cards */
+.ia-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Card base */
+.ia-card {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+/* Purple cards (top two) */
+.ia-card-primary {
+  background: linear-gradient(135deg, #5b6bff, #7a4dff);
+  color: #ffffff;
+}
+
+/* Blue-ish card (bottom) */
+.ia-card-secondary {
+  background: #3a4bff;
+  color: #ffffff;
+}
+
+/* Card hover */
+.ia-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Card icon */
+.ia-card-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ia-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Simple outline icon for course */
+.ia-card-icon-outline {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.ia-icon-box {
+  width: 60%;
+  height: 60%;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Card text */
+.ia-card-text h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ia-card-text p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.ia-card-text.center {
+  text-align: left;
+}
+
+/* Mobile tweaks */
+@media (max-width: 400px) {
+  .ia-app {
+    padding: 12px 8px 20px;
+  }
+
+  .ia-card-text h2 {
+    font-size: 15px;
+  }
+}
